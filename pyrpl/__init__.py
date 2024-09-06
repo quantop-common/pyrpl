@@ -1,15 +1,15 @@
 from ._version import __version_info__, __version__
 
 __author__ = "Leonhard Neuhaus <neuhaus@lkb.upmc.fr>"
-__license__ = "MIT License"
+__license__ = "GNU General Public License 3 (GPLv3)"
 
 # manage warnings of numpy and scipy
 import warnings
 import numpy as np
 # pyqtgraph is throwing a warning on ScatterPlotItem
-warnings.simplefilter("ignore", np.VisibleDeprecationWarning)
+warnings.simplefilter("ignore", np.exceptions.VisibleDeprecationWarning)
 # pyqtgraph is throwing a warning on ScatterPlotItem
-warnings.simplefilter("error", np.ComplexWarning)
+warnings.simplefilter("error", np.exceptions.ComplexWarning)
 # former issue with IIR, now resolved
 #from scipy.signal import BadCoefficients
 #warnings.simplefilter("error", BadCoefficients)
